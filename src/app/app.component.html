@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="header">
+        <h2>Find your job</h2>
+        <div class="button-group">
+            <button appChangeBackgroundColor [ngClass]="{ 'active-button': isJobsActive }"
+                (click)="jobsButtonClick()">JOBS</button>
+            <button appChangeBackgroundColor (click)="resetActive()">FAVORITES</button>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</div>

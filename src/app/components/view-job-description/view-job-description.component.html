@@ -1,0 +1,33 @@
+<div *ngIf="jobDetailsData">
+    <div class="container">
+        <a (click)="returnBackJobs()"> <i class="fa fa-home" aria-hidden="true"></i> Back</a>
+        <div class="row header">
+            <div class="col-sm-1">
+                <img [src]="jobDetailsData.companyLogo" alt="Company Logo" />
+            </div>
+            <div class="Jobstitle">
+                <h1>{{jobDetailsData.title}}</h1>
+                <mark class="tag">{{jobDetailsData.types}}</mark>&nbsp;
+                <mark class="tag">{{jobDetailsData.industries}}</mark>
+            </div>
+        </div>
+        <div>
+            <div>
+                <p>
+                    <span class="textDataData">Published Date : </span>{{ jobDetailsData.publishDate | date :
+                    "M/d/yyyy" }}
+                </p>
+                <p>
+                    <span class="textData">Location : </span>{{ jobDetailsData.location }}
+                </p>
+                <p>
+                    <span class="textData">Reference : </span>{{ jobDetailsData.reference }}
+                </p>
+                <p>
+                    <span class="textData">Description : </span>
+                </p>
+                <p [innerHTML]="jobDetailsData.description"></p>
+            </div>
+        </div>
+    </div>
+</div>
